@@ -2,10 +2,62 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>私のホームページ</title>
+    <title>○月○日の日記 - 桜父丸の日記</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f7f9fa;
+            color: #333333;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .date {
+            color: #888888;
+            font-size: 0.9em;
+        }
+        h1 {
+            color: #d81b60;
+            border-bottom: 2px solid #f1f1f1;
+            padding-bottom: 10px;
+            font-size: 1.5em;
+        }
+        .diary-photo {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin: 20px 0;
+            display: block;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: #d81b60;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>ようこそ！私のホームページへ</h1>
-    <p>Geminiと一緒にGitHubで作った初めてのページです。これから少しずつアップデートしていきます！</p>
+
+    <!-- 🗓️ 日付 -->
+    <p class="date">2026年10月8日</p>
+
+    <!-- ✍️ 日記のタイトル -->
+    <h1>初めてのホームページ作り</h1>
+
+    <!-- 📷 写真を表示する場所（のちほど設定します） -->
+    <img src="photo.jpg" alt="日記の写真" class="diary-photo">
+
+    <!-- 💬 日記の本文（ここを自由に書き換えます） -->
+    <p>今日はジェミと一緒にGitHubを使ってホームページ作りに挑戦した。</p>
+    <p>英語ばかりの画面で最初はこんがらがってしまったけれど、一つずつ進めていったら、本当に自分だけのサイトがインターネット上に公開されて感動した！</p>
+    <p>これからこの場所に、日々の出来事や大切な思い出を少しずつ書き残していこうと思う。一生モノの趣味になりそうだ。</p>
+
+    <!-- 🔙 トップへ戻るリンク -->
+    <a href="../index.html" class="back-link">← トップページへ戻る</a>
+
 </body>
 </html>
