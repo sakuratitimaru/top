@@ -98,4 +98,6 @@ img {
   margin-top: 40px;
 }
 
-@media (max-width:800px) {}
+@media (max-width: 800px) {
+  .site-menu ul {display: block;}
+}
