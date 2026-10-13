@@ -1,0 +1,86 @@
+html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>SALEバッジの自動切り替え実験</title>
+    <style>
+        /* 1. 商品を囲む外枠の箱（ここが基準！） */
+        .product-card {
+            position: relative; /* 子要素（バッジ）の基準点になります */
+            width: 200px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        /* ダミーの画像エリア */
+        .product-image {
+            width: 100%;
+            height: 150px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+
+        /* 2. SALEバッジの見た目と位置（今回の主役！） */
+        .sale-badge {
+            position: absolute; /* 親要素の箱を基準に浮かせます */
+            top: 10px;          /* 上から10px */
+            left: 10px;         /* 左から10px */
+            background-color: #ff3333;
+            color: white;
+            padding: 4px 8px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 4px;
+            
+            /* 初期状態は「非表示（隠す）」にしておきます */
+            display: none; 
+        }
+
+        /* 3. システムから「sale中」という目印をつけられたら表示する */
+        .product-card.is-sale .sale-badge {
+            display: block; /* 隠していたバッジを表示する */
+        }
+
+        /* ボタンの見た目 */
+        .toggle-btn {
+            margin-top: 15px;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 商品カード（ここが親の箱） -->
+    <div id="myProduct" class="product-card">
+        <!-- 自動で出現するバッジ（position: absoluteで浮いている） -->
+        <div class="sale-badge">SALE</div>
+        
+        <!-- 商品の中身 -->
+        <div class="product-image">【商品画像】</div>
+        <p>おしゃれなスニーカー</p>
+        <p><strong>¥5,000</strong></p>
+    </div>
+
+    <!-- 切り替えボタン -->
+    <button class="toggle-btn" onclick="toggleSale()">セールの状態を切り替える</button>
+
+    <script>
+        // ボタンが押されたら動くシステム（JavaScript）
+        function toggleSale() {
+            // 商品の箱（myProduct）を見つける
+            const product = document.getElementById('myProduct');
+            
+            // 箱に「is-sale」という目印をつけたり外したりする
+            product.classList.toggle('is-sale');
+        }
+    </script>
+
+</body>
+</html>
