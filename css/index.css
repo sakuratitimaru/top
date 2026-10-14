@@ -1,9 +1,0 @@
-@charset "utf-8";
-
-.first-view{
-  height: 100vh;
-  background-image: url(../images/index/bg-main.webp);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
