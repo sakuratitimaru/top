@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+.first-view {
+  height: 105vh;
+  background-image: url(../images/index/bg-main.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* ===================================================
+   見出しエリア（h1-text）のスタイル
+   =================================================== */
+
+.h1-text {
+  text-align: center;
+  /* ★これで文字が画面の完全な真ん中に寄ります */
+  padding-top: 50px;
+  /* 上のデニム画像との間の心地よいスキマ */
+  padding-bottom: 6px;
+  /* 下の文章との間の心地よいスキマ */
+}
+
+.h1-text h1 {
+  font-size: 34px;
+  /* 画面中央で見栄えがするようにほんの少し大きく */
+  line-height: 1.6;
+  /* 日本語と英語の縦の行間をゆったり見せる */
+  font-weight: 1000;
+  color: #000;
+  margin: 0;
+  /* ★ 文字に綺麗な影（シャドウ）をつけます */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* 全体の親：中身をすべて画面の「真ん中」に寄せる */
+.lead {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* 1. 文章部分：左揃えの塊にして画面の真ん中へ */
+.lead-text {
+  display: inline-block;
+  text-align: left;
+  line-height: 1.8;
+}
+
+/* 2. 箇条書き：左揃えの塊にして画面の真ん中へ */
+.lead-list {
+  display: inline-block;
+  text-align: left;
+  list-style-type: "・";
+  padding-left: 0;
+  margin-top: 24px;
+  /* 文章との間のスキマ */
+  line-height: 1.8;
+}
+
+/* 3. ボタンの配置エリア */
+.link-button-area {
+  margin-top: 36px;
+}
+
+.link-button {
+  background-color: #f4dd64;
+  display: inline-block;
+  min-width: 200px;
+  line-height: 48px;
+  border-radius: 24px;
+font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.link-button:hover {
+  background-color: #d8b500;
+}
+
+@media (max-width: 800px) {
+  .first-view {
+   height: calc(100vh - 130px);
+   background-image: url(../images/index/bg-main-sp.webp);
+  }
+    }
