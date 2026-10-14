@@ -79,7 +79,7 @@ font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
 
 @media (max-width: 800px) {
   .first-view {
-   height: 100vh;
+   height: calc(100vh - 130px);
    background-image: url(../images/index/bg-main-sp.webp);
   }
     }
